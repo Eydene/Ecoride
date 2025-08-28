@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../Ecoride/assets/style.css">
 </head>
 
 <body>
-    <!-- Section Header    -->
-    <section class="header">
-        <h1>Voyagez logique avec le covoiturage écologique !</h1>
-        <h3>Trouver un covoiturage</h3>
-        <a href="covoiturage.html" class="btn">Covoiturage</a>
+    <section class="nav-bar">
+        <a href="../Ecoride/index.php"><img src="../../Ecoride/images/logo.png" class="logo"></a>
+        <div>
+            <ul id="topmenu">
+                <li><a href="../Ecoride/index.php">Accueil</a></li>
+                <li><a href="../Ecoride/frontend/covoiturage.html">Covoiturage</a></li>
+                <li><a href="../Ecoride/frontend/form_log.html">Se connecter / S'inscrire</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </div>
+
     </section>
 </body>
 
