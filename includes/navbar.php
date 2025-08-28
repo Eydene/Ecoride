@@ -13,8 +13,8 @@
         <div>
             <ul id="topmenu">
                 <li><a href="../Ecoride/index.php">Accueil</a></li>
-                <li><a href="../Ecoride/frontend/covoiturage.html">Covoiturage</a></li>
-                <li><a href="../Ecoride/frontend/form_log.html">Se connecter / S'inscrire</a></li>
+                <li><a href="../Ecoride/frontend/covoiturage.php">Covoiturage</a></li>
+                <li><a href="../Ecoride/frontend/form_log.php">Se connecter / S'inscrire</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
 
