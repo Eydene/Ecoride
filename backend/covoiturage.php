@@ -1,28 +1,31 @@
 <?php
+
+require('database.php');
+
     if (isset($_POST['rechercher'])) {
-    if (!empty($_POST['adresse_dep']) && !empty($_POST['adresse_arr']) && !empty($_POST['date'])){
-        $adresse_dep = htmlspecialchars($_POST['adresse_dep']);
-        $adresse_arr = htmlspecialchars($_POST['adresse_arr']);
-        $date = htmlspecialchars($_POST['date']);
+        if (!empty($_POST['lieu_depart']) && !empty($_POST['lieu_arrivee']) && !empty($_POST['date_depart'])){
+            $lieu_depart = htmlspecialchars($_POST['lieu_depart']);
+            $lieu_arrivee = htmlspecialchars($_POST['lieu_arrivee']);
+            $date_arrivee = $_POST['date_arrivee'];
 
-            /* je ne sais pas si je dois faire une requette préparée.. 
+            
 
+        $iscovoit = $bdd->prepare('SELECT * FROM covoiturage WHERE lieu_depart = ? AND lieu_arrivee = ? AND date_depart = ? AND nb_places > 0');
+        $iscovoit->execute([$lieu_depart, $lieu_arrivee, $date_arrivee]);
+        $result= $iscovoit->fetchALL(); 
 
-        $insertUser = $bdd->prepare('INSERT INTO users(pseudo, mail, mdp)VALUES(:pseudo, :mail, :mdp)');
-        $insertUser->bindValue('pseudo', $pseudo);
-        $insertUser->bindValue('mail', $mail);
-        $insertUser->bindValue('mdp', $mdp);
-
-        $CreatedUser = $insertUser->execute();
-
-        if ($CreatedUser){
-            echo "Inscription réussie";
+        
+        if (count($result) > 0) {
+            echo "<h1>Voici les trajets disponibles pour votre recherche: </h1>";
+            foreach ($result as $covoit){
+                echo $covoit;
+            }
+        }else{
+            echo "<p>Aucun résultat trouvé pour votre demande, n'hésitez pas à proposer votre voyage !</p>";
         }
-    }else {
-        echo "Veuillez compléter tous les champs !";
-    }  */
-
-    } 
-
+    }else{
+        echo "<p>Veuillez remplir le formulaire entièrement !</p>";
+    }
+}
 
 ?>

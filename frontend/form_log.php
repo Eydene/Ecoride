@@ -9,7 +9,7 @@
 
 <body>
 
-    <form method="POST" action="../backend/signup.php">
+    <form class="signup_form" method="POST" action="../backend/signup.php">
         <label for="pseudo">Entrez un pseudo:</label><br><br>
         <input type="text" placeholder="Pseudo" name="pseudo" autocomplete="off">
         <br />
@@ -24,7 +24,7 @@
 
     <hr>
 
-    <form method="POST" action="../backend/login.php">
+    <form class="login_form" method="POST" action="../backend/login.php">
         <label for="pseudo">Entrez votre pseudo:</label><br><br>
         <input type="text" placeholder="Pseudo" name="pseudo" autocomplete="off">
         <br />
