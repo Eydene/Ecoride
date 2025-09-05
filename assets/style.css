@@ -1,13 +1,13 @@
 /* Style général */
 * {
-    margin: 0;
-    padding: 0;
+   
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+    
 }
 
 body {
     width: 100%;
+
 }
 
 h1{
@@ -43,6 +43,13 @@ p {
     color: #465b52;
     margin: 15px 0 20 px 0;
     line-height: 30px;
+}
+
+/* Style pour mes messages d'erreurs*/
+
+.errorMsg{
+    color: red;
+    font-weight: bold;
 }
 
 /* Style pour la barre de navigation */

@@ -1,14 +1,9 @@
 <?php
 
 session_start();
-
-require('database.php');
-
+$_SESSION= array();
 session_destroy();
-
-header('Location: ../frontend/form_log.html')
-
-
-
+header('Location: ../frontend/form_login.php');
+exit;
 
 ?>

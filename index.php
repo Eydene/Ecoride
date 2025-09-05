@@ -37,7 +37,7 @@
             max="2099-12-31" autocomplete="off">
         <br /><br />
         <button type="submit" name="rechercher">Rechercher un covoiturage</button>
-
+    </form>
 
 
 
